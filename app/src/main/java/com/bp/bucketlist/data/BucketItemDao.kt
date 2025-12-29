@@ -24,19 +24,8 @@ interface BucketItemDao {
     @Query("SELECT * FROM bucket_items WHERE status = 1 ORDER BY priority DESC")
     suspend fun getCompletedItems(): List<BucketItem>
 
-    @Query("UPDATE bucket_items SET status = 1 WHERE id = :id")
-    suspend fun markCompleted(id: Long)
-
-    @Query("""
-    UPDATE bucket_items
-    SET status = 1,
-        completedAt = :completedAt
-    WHERE id = :id
-""")
-    suspend fun markCompleted(
-        id: Long,
-        completedAt: String
-    )
+    @Query("UPDATE bucket_items SET status = 1, completedAt = :completedAt WHERE id = :id")
+    suspend fun markCompleted(id: Long, completedAt: String)
 
 }
 
