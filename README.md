@@ -46,20 +46,21 @@ The app is built using **Kotlin**, **Jetpack Compose**, and **Room (SQLite)**, f
 
 ## Architecture Overview
 
-The app follows **MVVM (Model–View–ViewModel)**:
+The app follows **MVVM (Model-View-ViewModel)**:
 
 UI (Compose)
 ↓
+
 ViewModel
 ↓
+
 Repository
 ↓
+
 Room DAO
 ↓
-SQLite
 
-yaml
-Copy code
+SQLite
 
 ### Key Components
 
