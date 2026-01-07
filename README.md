@@ -49,15 +49,19 @@ The app is built using **Kotlin**, **Jetpack Compose**, and **Room (SQLite)**, f
 The app follows **MVVM (Model-View-ViewModel)**:
 
 UI (Compose)
+
 ↓
 
 ViewModel
+
 ↓
 
 Repository
+
 ↓
 
 Room DAO
+
 ↓
 
 SQLite
